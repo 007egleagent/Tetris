@@ -22,7 +22,7 @@ public class Main {
 	}
 
 	// setters 
-	
+	 
 	// sets the rows values
     public void setRows(int rows){
     	this.rows = rows;
@@ -34,7 +34,7 @@ public class Main {
     }
     
     // getters
-
+                        
     // gets values from rows
     public int getRows(){
         return rows;
@@ -51,18 +51,21 @@ public class Main {
     	// calls main
     	Main m = new Main();
 
-    	// makes the values random
-    	for (int i = 0; i < boardgame.length; i++) {
-    		for (int j = 0; j < boardgame[i].length; j++) {
-    			boardgame[i][j] = (int)(Math.random()*10);
+    	// OP code that puts a row of 1's 
+    	for (int r = 0; r < boardgame.length; r++) {
+    		for(int c = 0; c < boardgame[r].length; c++) {
+    			boardgame[5][c] = 1;
     		}
     	}
     	
+    	
+    	if(boardgame[5][1] == 1) {
+    		boardgame[5][1] = 0;
+    	}
     	// prints out the 2d array board 
     	for (int r = 0; r < boardgame.length; r++) {
  				System.out.println(Arrays.toString(boardgame[r]));
     			
-
     	}
 
     	// prints the values of the height and length in that order
@@ -70,6 +73,5 @@ public class Main {
     	System.out.println(m.columns);
     
     	}
-        
 }
 
