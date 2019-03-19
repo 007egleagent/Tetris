@@ -1,3 +1,10 @@
+ /*                       _             
+  _ __  __ _  _ __ ___  (_) _ __  ___  
+ | '__|/ _` || '_ ` _ \ | || '__|/ _ \ 
+ | |  | (_| || | | | | || || |  | (_) |
+ |_|   \__,_||_| |_| |_||_||_|   \___/ 
+                                       
+*/
 import java.util.Arrays;
 
 public class Main {
@@ -5,11 +12,13 @@ public class Main {
 	// instance variables 
 	private int rows;
 	private int columns;
+	private static int[][] boardgame;
 
 	// constructor with the values for row and columns
 	public Main() {
 		this.rows = 20;
 		this.columns = 10;
+		boardgame = new int[rows][columns];
 	}
 
 	// setters 
@@ -41,10 +50,7 @@ public class Main {
     	
     	// calls main
     	Main m = new Main();
-    	
-    	// generates the 2d array with the rows and columns values from the constructor 
-    	int[][] boardgame = new int[m.rows][m.columns];
-    
+
     	// prints out the 2d array board 
     	for (int r = 0; r < boardgame.length; r++) {
     		System.out.println(Arrays.toString(boardgame[r]));}
