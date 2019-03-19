@@ -16,7 +16,7 @@ public class Main {
 
 	// constructor with the values for row and columns
 	public Main() {
-		this.rows = 20;
+		this.rows = 24;
 		this.columns = 10;
 		boardgame = new int[rows][columns];
 	}
@@ -51,9 +51,19 @@ public class Main {
     	// calls main
     	Main m = new Main();
 
+    	// makes the values random
+    	for (int i = 0; i < boardgame.length; i++) {
+    		for (int j = 0; j < boardgame[i].length; j++) {
+    			boardgame[i][j] = (int)(Math.random()*10);
+    		}
+    	}
+    	
     	// prints out the 2d array board 
     	for (int r = 0; r < boardgame.length; r++) {
-    		System.out.println(Arrays.toString(boardgame[r]));}
+ 				System.out.println(Arrays.toString(boardgame[r]));
+    			
+
+    	}
 
     	// prints the values of the height and length in that order
     	System.out.println(m.rows);
