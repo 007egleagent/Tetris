@@ -20,7 +20,6 @@ public class Main {
 		this.rows = 24;
 		this.columns = 10;
 		boardgame = new int[rows][columns];
-		
 	}
 	// setters 
 	 
@@ -51,6 +50,20 @@ public class Main {
     	for (int r = 0; r < boardgame.length; r++) {
     		for(int c = 0; c < boardgame[r].length; c++) {
     			boardgame[2][c] = 1;
+    			boardgame[2][4] = 5;
+    			boardgame[5][c] = 1;
+    		 	boardgame[0][9] = 1;
+    		 	boardgame[3][5] = 3;
+    		 	boardgame[3][6] = 6;
+    		 	boardgame[3][7] = 2;
+    		 	boardgame[3][6] = 3;
+    		 	boardgame[3][8] = 9;
+    		 	boardgame[3][9] = 1;
+    		 	boardgame[3][4] = 7;
+    		 	boardgame[3][3] = 6;
+    		 	boardgame[3][2] = 2;
+    		 	boardgame[3][1] = 5;
+//    		 	boardgame[3][0] = 5;   		 
     		}
     	}
     }
@@ -62,36 +75,41 @@ public class Main {
     	}
     }
     
-    public static void tracksTheRows() {
+    public static void rowSameValues() {	
+    	
     	for (int r = 0; r < boardgame.length; r++) {
     	    System.out.println("start of row " + r);
     	    for (int c = 0; c < boardgame[r].length; c++) {
-    	    	System.out.println(boardgame[r][c]);
-    	        // do stuff with row,col
+    	    	System.out.println(boardgame[r][c]);  	
+   	
+    	    	boolean isHigherThanZero = true;
+    	    	
+    	    	for (int i : boardgame[r]) {
+    	    	    if (i <= 0) {
+    	    	        isHigherThanZero = false;
+    	    	        break;
+    	    	    }
+    	    	}
+    	    	if (isHigherThanZero) {
+    	    	    for (int i=0; i<boardgame[r].length; i++) {
+    	    	        boardgame[r][i] = 0;
+    	    	    }
+    	    	}
+    	 
     	    }
-    	    // End of row
-    	}
+ 
+    	} 
     	
-//    	for (...rows)
-//    	    boolean allOnes = true;
-//    	    for (...columns)
-//    	        if it's not a 1
-//    	            allOnes = false
-//    	    If allOnes
-//    	        doStuff
-//    
     }
-   
+    	
     // the place where it runs                            
     public static void main(String[] args) {
     	
     	// calls main
-    	Main m = new Main();
-    
-    	boardgame[0][1] = 1;
+    	Main m = new Main(); 	
     	
     	rowsOfOne();
-    	tracksTheRows();
+    	rowSameValues();
     	printOutBoard();
 
     	// prints the values of the height and length in that order
