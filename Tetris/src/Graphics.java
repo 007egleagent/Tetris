@@ -122,15 +122,16 @@ public class Graphics extends Application {
         theCoordsForY();
 
         // draws the X line
-        Line linex = new Line(boardrowsx[0][0], 660, boardrowsx[0][2], 0); 
+        Line linex = new Line(boardrowsx[0][0], 675, boardrowsx[0][2], 0); 
         
         // draws the Y line 
-        Line liney = new Line(330, boardrowsy[0][1], 0, boardrowsy[0][3]);
+        Line liney = new Line(345, boardrowsy[0][1], 0, boardrowsy[0][3]);
       
         Group root = new Group(linex, liney); 
         
 
         Scene scene = new Scene(root, windowX, windowY);
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         
         primaryStage.show();
