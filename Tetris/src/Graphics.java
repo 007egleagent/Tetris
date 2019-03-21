@@ -34,8 +34,8 @@ public class Graphics extends Application {
 //	private static int[][] whatever = new int[][] {{4,5,6,2},{4,5,2,3},{9,2,6,3}};
 	
 	public Graphics() {
-		Graphics.windowX = 600;
-		Graphics.windowY = 900;
+		Graphics.windowX = 330;
+		Graphics.windowY = 660;
 		
 		Graphics.lenRows = 24;
 		Graphics.lenCol = 10;
@@ -122,10 +122,10 @@ public class Graphics extends Application {
         theCoordsForY();
 
         // draws the X line
-        Line linex = new Line(boardrowsx[0][0], 900, boardrowsx[0][2], 0); 
+        Line linex = new Line(boardrowsx[0][0], 660, boardrowsx[0][2], 0); 
         
         // draws the Y line 
-        Line liney = new Line(600, boardrowsy[0][1], 0, boardrowsy[0][3]);
+        Line liney = new Line(330, boardrowsy[0][1], 0, boardrowsy[0][3]);
       
         Group root = new Group(linex, liney); 
         
